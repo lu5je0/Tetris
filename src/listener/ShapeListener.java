@@ -1,6 +1,7 @@
 package listener;
 
 public interface ShapeListener {
-    void moveDown();
-    boolean isShapeMoveDownable();
+	void moveDown();
+
+	boolean isShapeMoveDownable();
 }
