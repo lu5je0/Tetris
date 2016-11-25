@@ -32,7 +32,10 @@ public class GamePanel extends JPanel {
 	void drawOutline(Graphics g) {
 		//10 17 30 30
 		g.setColor(Color.black);
-		g.fillRect(0,0, 300, 510);
+		g.fillRect(0,0, 671, 510);
+		g.setColor(Color.orange);
+		g.drawLine(300, 0, 300, 510);
+		g.setColor(Color.black);
 		g.setFont(new Font("Arial", Font.BOLD, 35));
 		g.drawString("Score:" + Until.score, 400, 400);
 	}

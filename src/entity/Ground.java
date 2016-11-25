@@ -20,7 +20,9 @@ public class Ground {
 		}
 	}
 
-	//消除行
+	/**
+	 * 消除完整的一行
+	 */
 	public void remove() {
 		int score = 0;
 		for (int j = 0; j < 17; j++) {
@@ -44,7 +46,11 @@ public class Ground {
 		}
 	}
 
-	//将方块添加到groud中
+	/**
+	 * 将方块添加到groud中
+	 * @param shape
+	 * @throws Exception
+	 */
 	public void getShape(Shape shape) throws Exception {
 		for (int i = 0, j = 0; i <= 15; i++) {
 			if (i == 4 || i == 8 || i == 12)
