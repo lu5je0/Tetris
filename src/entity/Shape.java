@@ -11,7 +11,10 @@ public class Shape {
 	private ShapeDiver shapeDiver = new ShapeDiver();
 	public int rotate = 0;
 	public int type = 2;
-	public int time = 300;
+	public int time = 500;
+	public static final int width = 30;
+	public static final int height = 30;
+
 	Random r = new Random();
 
 	public static int shapes[][][] = new int[][][]{
@@ -154,7 +157,7 @@ public class Shape {
 			if (i == 4 || i == 8 || i == 12)
 				j++;
 			if (shapes[type][rotate][i] == 1) {
-				g.drawImage(GamePanel.img[type + 1], x + j * 30, y + (i % 4) * 30, 30, 30, null);
+				g.drawImage(GamePanel.img[type + 1], x + j * 30, y + (i % 4) * 30, width, height, null);
 			}
 		}
 	}

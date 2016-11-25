@@ -9,10 +9,10 @@ import java.awt.*;
 
 public class GamePanel extends JPanel {
 
-	Ground ground;
-	Shape shape;
+	private Ground ground;
+	private Shape shape;
 	public static Image img[] = new Image[8];
-	public Image bg = new ImageIcon("resource/bgb.png").getImage();
+
 
 	@Override
 	public void paint(Graphics g) {
@@ -31,7 +31,8 @@ public class GamePanel extends JPanel {
 
 	void drawOutline(Graphics g) {
 		//10 17 30 30
-		g.drawImage(bg, 0, 0, null);
+		g.setColor(Color.black);
+		g.fillRect(0,0, 300, 510);
 		g.setFont(new Font("Arial", Font.BOLD, 35));
 		g.drawString("Score:" + Until.score, 400, 400);
 	}
