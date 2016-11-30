@@ -99,17 +99,17 @@ public class Controller implements KeyListener, ShapeListener, GroundListener {
 	}
 
 	public boolean isShapeMove(char dir) {
-		int pianyi = -1;
+		int offset = -1;
 		if (dir == 'r')
-			pianyi = 1;
+			offset = 1;
 		for (int i = 0, j = 0; i <= 15; i++) {
 			if (i == 4 || i == 8 || i == 12)
 				j++;
 			if (shape.shapes[shape.type][shape.rotate][i] == 1) {
 				System.out.println((shape.x / 30 + j) + "," + (shape.y / 30 + (i % 4)));
-				if (shape.x / 30 + j + pianyi < 0 || shape.x / 30 + j + pianyi > 9)
+				if (shape.x / 30 + j + offset < 0 || shape.x / 30 + j + offset > 9)
 					return false;
-				if (ground.gro[shape.x / 30 + j + pianyi][shape.y / 30 + (i % 4)] != 0) {
+				if (ground.gro[shape.x / 30 + j + offset][shape.y / 30 + (i % 4)] != 0) {
 					return false;
 				}
 			}

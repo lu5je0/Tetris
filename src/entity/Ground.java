@@ -4,11 +4,13 @@ import listener.GroundListener;
 import view.GamePanel;
 
 import java.awt.*;
+import java.util.Random;
 
 public class Ground {
 
 	public int[][] gro = new int[10][17];
-	GroundListener listener;
+	private GroundListener listener;
+	private Random random = new Random();
 
 	public void drawMe(Graphics g) {
 		for (int i = 0; i < 10; i++) {
@@ -23,7 +25,7 @@ public class Ground {
 	/**
 	 * 消除完整的一行
 	 */
-	public void remove() {
+	private void remove() {
 		int score = 0;
 		for (int j = 0; j < 17; j++) {
 			for (int i = 0, a = 0; i < 10; i++) {
@@ -48,7 +50,6 @@ public class Ground {
 
 	/**
 	 * 将方块添加到groud中
-	 * @param shape
 	 * @throws Exception
 	 */
 	public void getShape(Shape shape) throws Exception {

@@ -11,7 +11,7 @@ public class GamePanel extends JPanel {
 
 	private Ground ground;
 	private Shape shape;
-	public static Image img[] = new Image[8];
+	public static final Image img[] = new Image[8];
 
 
 	@Override
