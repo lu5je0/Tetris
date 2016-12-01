@@ -80,19 +80,19 @@ public class Controller implements KeyListener, ShapeListener, GroundListener {
 	public void removeLine(int time) {
 		switch (time) {
 			case 1:
-				Util.score += 100;
+				Util.score += 10;
 				break;
 			case 2:
-				Util.score += 400;
+				Util.score += 40;
 				break;
 			case 3:
-				Util.score += 800;
+				Util.score += 80;
 				break;
 			case 4:
-				Util.score += 1600;
+				Util.score += 160;
 				break;
 			default:
-				Util.score += 3200;
+				Util.score += 320;
 				break;
 		}
 	}
