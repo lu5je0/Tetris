@@ -5,7 +5,7 @@ import entity.MusicPlayer;
 import entity.Shape;
 import listener.GroundListener;
 import listener.ShapeListener;
-import until.Until;
+import util.Util;
 import view.GamePanel;
 
 import java.awt.event.KeyEvent;
@@ -78,22 +78,21 @@ public class Controller implements KeyListener, ShapeListener, GroundListener {
 	}
 
 	public void removeLine(int time) {
-		System.out.println("消了" + time + "行");
 		switch (time) {
 			case 1:
-				Until.score += 100;
+				Util.score += 100;
 				break;
 			case 2:
-				Until.score += 400;
+				Util.score += 400;
 				break;
 			case 3:
-				Until.score += 800;
+				Util.score += 800;
 				break;
 			case 4:
-				Until.score += 1600;
+				Util.score += 1600;
 				break;
 			default:
-				Until.score += 3200;
+				Util.score += 3200;
 				break;
 		}
 	}

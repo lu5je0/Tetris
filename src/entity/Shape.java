@@ -175,7 +175,7 @@ public class Shape {
 			if (i == 4 || i == 8 || i == 12)
 				j++;
 			if (shapes[nextType][0][i] == 1) {
-				g.drawImage(GamePanel.img[nextType + 1], 345 + j * 30, 400 + (i % 4) * 30, width, height, null);
+				g.drawImage(GamePanel.img[nextType + 1], 345 + j * 30, 370 + (i % 4) * 30, width, height, null);
 			}
 		}
 	}
