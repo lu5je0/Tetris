@@ -39,7 +39,9 @@ public class Controller implements KeyListener, ShapeListener, GroundListener {
 				break;
 			case KeyEvent.VK_DOWN:
 			case KeyEvent.VK_S:
-				shape.time = 20;
+				Shape.ShapeDiver shapeDiver = shape.getShapeDiver();
+				shapeDiver.interrupt();
+				shape.curTime = 20;
 				break;
 			case KeyEvent.VK_RIGHT:
 			case KeyEvent.VK_D:

@@ -9,13 +9,22 @@ import java.util.Random;
 public class Shape {
 
 	private ShapeDiver shapeDiver = new ShapeDiver();
+
+	public ShapeDiver getShapeDiver() {
+		return shapeDiver;
+	}
+
 	public int rotate = 0;
 	public int type = Math.abs(new Random().nextInt() % 7);
-	public int time = 500;
+
+	public final int sleepTime = 1000;
+
+	public int curTime = sleepTime;
+
 	public static final int width = 30;
 	public static final int height = 30;
 	//初始为-1
-	private int nextType = -1;
+	private int nextType;
 	private Random random = new Random();
 
 	{
@@ -95,7 +104,7 @@ public class Shape {
 	public void newShape() {
 		rotate = 0;
 		//reset time
-		time = 300;
+		curTime = sleepTime;
 		x = 30 * 4;
 		y = -30;
 		type = nextType;
@@ -187,7 +196,7 @@ public class Shape {
 
 
 	//内部类，驱动方块自动下落
-	private class ShapeDiver extends Thread {
+	public class ShapeDiver extends Thread {
 		public void run() {
 			while (true) {
 				//判断是否可以下落
@@ -200,10 +209,8 @@ public class Shape {
 						System.exit(-1);
 					}
 					try {
-						Thread.sleep(time);
+						Thread.sleep(curTime);
 					} catch (InterruptedException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
 					}
 				} else {
 					newShape();

@@ -25,7 +25,7 @@ public class Game {
 
 		//创建窗体
 		JFrame frame = new JFrame("俄罗斯方块");
-		frame.setSize(466, 538);
+		frame.setSize(466, 556);
 		frame.setResizable(false);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLocationRelativeTo(null);
